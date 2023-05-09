@@ -32,6 +32,6 @@
 		<Main backgroundAudio={audio} shouldBePlayed={shouldAudioBePlayed} />
 	{/if}
 	<audio bind:this={audio}>
-		<source src="/ring.mp3" type="audio/mpeg">
+		<source src="ring.mp3" type="audio/mpeg">
 	</audio>
 </BackGround>
