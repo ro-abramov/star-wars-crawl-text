@@ -1,0 +1,35 @@
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+html,
+body {
+	font-size: 16px;
+}
+
+:root {
+	--font-size-400: 1rem;
+	--font-size-600: 2.4rem;
+	--font-size-700: 2.8rem;
+	--font-size-900: 3rem;
+	--font-size-xl: 3.5rem;
+	--font-size-xxl: 4.2rem;
+
+	--color-intro: rgb(75, 213, 238);
+
+	--gap-200: 8px;
+	--gap-300: 16px;
+	--gap-400: 24px;
+
+	--intro-delay: 1s;
+	--intro-duration: 5s;
+
+	--logo-delay: 7s;
+	--logo-duration: 12s;
+
+	--text-delay: 20s;
+	--text-duration: 150s;
+}
+
+p {
+	margin: 0;
+}
