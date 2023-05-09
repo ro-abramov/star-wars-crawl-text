@@ -29,11 +29,8 @@ jobs:
         with:
           node-version: 18
           cache: 'npm'
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 6.0.2
-      - run: pnpm install
-      - run: pnpm run build
+      - run: npm ci
+      - run: npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
