@@ -3,9 +3,6 @@
 	import BackGround from '../lib/components/BackGround.svelte';
 
 	let audio: HTMLAudioElement;
-	if (globalThis.Audio) {
-		audio = new globalThis.Audio('/ring.mp3');
-	}
 	let started: boolean = false;
 	let shouldAudioBePlayed = true;
 
@@ -34,4 +31,7 @@
 	{#if started}
 		<Main backgroundAudio={audio} shouldBePlayed={shouldAudioBePlayed} />
 	{/if}
+	<audio bind:this={audio}>
+		<source src="/ring.mp3" type="audio/mpeg">
+	</audio>
 </BackGround>
