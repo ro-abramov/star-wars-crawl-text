@@ -10,7 +10,7 @@
 		max-width: 100vw;
 		font-size: 1rem;
 		background-color: black;
-		color: #ffe81f;
+		color: var(--color-primary);
 		font-family: 'Roboto Condensed', Century Gothic, CenturyGothic, AppleGothic, sans-serif;
 		overflow: hidden;
 		display: flex;

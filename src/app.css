@@ -15,6 +15,7 @@ body {
 	--font-size-xxl: 4.2rem;
 
 	--color-intro: rgb(75, 213, 238);
+	--color-primary: #fade4b;
 
 	--gap-200: 8px;
 	--gap-300: 16px;
@@ -27,7 +28,7 @@ body {
 	--logo-duration: 12s;
 
 	--text-delay: 20s;
-	--text-duration: 150s;
+	--text-duration: 120s;
 }
 
 p {
