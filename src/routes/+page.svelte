@@ -18,10 +18,10 @@
 <BackGround>
 	{#if !started}
 		<div>
-			<div class="btn-wrapper"><button on:click={start} class="btn"> Take the tour </button></div>
+			<div class="btn-wrapper"><button on:click={start} class="btn">Начать</button></div>
 			<label>
 				<input type="checkbox" bind:checked={shouldAudioBePlayed} />
-				With audio
+				С аудио
 			</label>
 		</div>
 	{/if}
@@ -30,10 +30,9 @@
 		<Main backgroundAudio={audio} shouldBePlayed={shouldAudioBePlayed} />
 	{/if}
 	<audio bind:this={audio}>
-		<source src="ring.mp3" type="audio/mpeg">
+		<source src="ring.mp3" type="audio/mpeg" />
 	</audio>
 </BackGround>
-
 
 <style>
 	.btn-wrapper {

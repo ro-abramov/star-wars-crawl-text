@@ -28,12 +28,17 @@
 
 	const stars = makeStars();
 
+	let isMapShown = false;
+
 	onMount(() => {
 		if (shouldBePlayed) {
 			setTimeout(() => {
 				backgroundAudio.play();
 			}, 7000);
 		}
+		setTimeout(() => {
+			isMapShown = true;
+		}, 60_000);
 	});
 </script>
 
@@ -58,9 +63,8 @@
 		<br />
 		<p>
 			7 лет назад в далекой далекой галактике был рождён мальчик. Совет выбрал ему имя - Тимур.
-			Теперь юный джедай приглашает вас на пикник чтобы отметить его седьмой день рождения и
-			испытать джедайские навыки. Приходите голодными в субботу 27 мая в 12 часов дня на Аду
-			Циганлию.
+			Теперь юный джедай приглашает вас чтобы отметить его седьмой день рождения и испытать
+			джедайские навыки. Приходите в субботу 27 мая в 14 часов дня в играоницу Puslica (Блок 22).
 		</p>
 		<br />
 		<p>Мы очень надеемся увидеть вас!</p>
@@ -69,7 +73,29 @@
 	</div>
 </div>
 
+{#if isMapShown}
+	<div class="map-container">
+		<iframe
+			src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2830.576454195073!2d20.4278925!3d44.8098197!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a70d9271c52f1%3A0x2a36859e3d93de3a!2sIgraonica%20Puslica!5e0!3m2!1sru!2srs!4v1684755994600!5m2!1sru!2srs"
+			title="Локация играоницы"
+			style="border:0;"
+			loading="lazy"
+			referrerpolicy="no-referrer-when-downgrade"
+			width="100%"
+			height="100%"
+		/>
+	</div>
+{/if}
+
 <style>
+	.map-container {
+		width: min(800px, 95vw);
+		aspect-ratio: 600 / 450;
+		bottom: 4rem;
+		position: absolute;
+		margin: auto;
+	}
+
 	.star {
 		position: fixed;
 		width: 2px;
